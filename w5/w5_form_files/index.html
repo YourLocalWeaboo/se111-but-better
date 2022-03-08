@@ -15,6 +15,7 @@
 <body>
 <h1>Birthday Party Redistration Form</h1>
     <!--Build your Table and Form here-->
+    <form action="confirm.html" method="get">
     <table>
         <thead>
             <tr>
@@ -26,29 +27,29 @@
             <tr>
                 <td>Parent/Guatdian Name</td>
                 <td>
-                    <form>
                         <label for="gfirst">First Name</label>
-                        <input type="text" name="gfirst" id="g-first" placeholder="First Name">
+                        <input type="text" required maxlength="20"name="gfirst" id="g-first" placeholder="First Name">
                         <br>
-                        <label for="glast">Last Name</label><input type="text" name="glname" id="g-last" placeholder="Last Name">
-                    </form>
+                        <label for="glast">Last Name</label>
+                        <input type="text" required maxlength="20" name="glname" id="g-last" placeholder="Last Name">
+
                 </td>
             </tr>
             <tr>
                 <td>Child's First Name</td>
                 <td>
-                    <form>
+
                         <input type="text" required name="cfirst" id="cfirst" placeholder="Child's First Name">
-                    </form>
+
                 </td>
             </tr>
             
             <tr>
                 <td>Child's Age</td>
                 <td>
-                    <form>
+
                         <input type="number" required name="age" id="age" placeholder="Child's Age">
-                    </form>
+
                 </td>
             </tr>            
             <tr>
@@ -58,25 +59,25 @@
             <tr>
                 <td>Date</td>
                 <td>
-                    <form>
-                        <input type="date" name="date" id="date">
-                    </form>
+
+                        <input type="date" required name="date">
+
                 </td>
             </tr>            
             <tr>
                 <td>Start Time</td>
                 <td>
-                    <form>
-                        <input type="time" name="time" id="time">
-                    </form>
+
+                        <input type="time" required name="time">
+
                 </td>
             </tr>            
             <tr>
                 <td>Number of Guests</td>
                 <td>
-                    <form>
-                        <input type="number" name="guets" id="guests" value="5">
-                    </form>
+
+                        <input type="number" name="guets" value="5">
+
                 </td>
             </tr>            
             <tr>
@@ -85,55 +86,56 @@
             <tr>
                 <td>Size</td>
                 <td>
-                    <form>
-                        <p>Small</p><input type="radio" name="sm" value="sm">
-                        <p>Medium</p><input type="radio" name="md" value="md">
-                        <p>Large</p><input type="radio" name="lg" value="lg">
-                    </form>
+ 
+                        <p>Small</p><input type="radio" name="size" value="sm">
+                        <p>Medium</p><input type="radio" name="size" value="md">
+                        <p>Large</p><input type="radio" name="size" value="lg">
+
                 </td>
             </tr>            
             <tr>
                 <td>Drinks</td>
                 <td>
-                    <form>
+
                         <input type="checkbox" name="drink1" checked="true" value="coke"> <label for="drink1">Coke</label><br>
                         <input type="checkbox" name="drink2"  value="spite"><label for="drink2">Sprite</label><br>
                         <input type="checkbox" name="drink3"  value="fruit punch"><label for="drink3">Fruit Punch</label><br>
                         <input type="checkbox" name="drink4"  value="lemonade"><label for="drink4">Lemonade</label><br>
-                    </form>
+
                 </td>
             </tr>            
             <tr>
                 <td>Cake</td>
                 <td>
-                    <form>
-                        <select name="cake"><option>Chocolate</option><option>Vanilla</option><option>Personal Bring In</option>
-                    </form>
+ 
+                        <select name="cake"><option selected>Chocolate</option><option>Vanilla</option><option>Personal Bring In</option>
+
                 </td>
             </tr>
             <td><h2>Decor</h2></td>
             <tr>
                 <td>Color Sceme</td>
                 <td>
-                    <form>
+
                         <input type="color" name="colors">
-                    </form>
+
                 </td>
             </tr>
             <tr>
                 <td>Other Suggestions</td>
                 <td>
-                    <form>
+
                         <textarea placeholder="Enter Other Suggestions Here" name="comments"></textarea>
-                    </form>
+
                 </td>
             </tr>
             <tr>
                 <td>
-                    <a href="confirm.html"><input type="submit" value="submit"></a>
+                    <a href="confirm.html" target="_blank"><input type="submit" value="submit"></a>
                 </td>
             </tr>
         </tbody>
     </table>
+    </form>
 </body>
 </html>
