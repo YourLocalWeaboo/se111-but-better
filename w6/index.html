@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Author" content="RH">
-    <meta name="description" content="W4 Movie">
+    <meta name="description" content="W6 Movie">
     <title>W6 Pay Calculator Richard Hennessy</title>
  </head>
 
@@ -21,16 +21,14 @@
         var hr = prompt("Insert your hourly rate here")
         console.log(hr)
         var tx = .2
+        console.log(tx)
         var gp = hw * hr
-        gp = num.toFixed(2)
         console.log(gp)
         var ta = gp * tx
-        ta = num.toFixed(2)
         console.log(ta)
         var np = gp - ta
-        np = num.toFixed(2)
         console.log(np)
-        alert('Your Gross Pay: $')
+        alert('Your Gross Pay: $' + gp + ' ' + 'Your Taxed Amount: $' + ta + ' ' +  'Your Net Pay: $' + np)
 
 
 
