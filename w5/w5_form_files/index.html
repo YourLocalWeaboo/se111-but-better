@@ -27,10 +27,10 @@
                 <td>Parent/Guatdian Name</td>
                 <td>
                     <form>
-                        <label for="pfname">First Name</label>
-                        <input type="text" name="pfname" id="first" placeholder="First Name">
+                        <label for="gfirst">First Name</label>
+                        <input type="text" name="gfirst" id="g-first" placeholder="First Name">
                         <br>
-                        <label for="plname">Last Name</label><input type="text" name="plname" id="last" placeholder="Last Name">
+                        <label for="glast">Last Name</label><input type="text" name="glname" id="g-last" placeholder="Last Name">
                     </form>
                 </td>
             </tr>
@@ -38,7 +38,7 @@
                 <td>Child's First Name</td>
                 <td>
                     <form>
-                        <input type="text" name="cfname" id="cfirst" placeholder="Child's First Name">
+                        <input type="text" required name="cfirst" id="cfirst" placeholder="Child's First Name">
                     </form>
                 </td>
             </tr>
@@ -47,7 +47,7 @@
                 <td>Child's Age</td>
                 <td>
                     <form>
-                        <input type="text" name="age" id="age" placeholder="Child's Age">
+                        <input type="number" required name="age" id="age" placeholder="Child's Age">
                     </form>
                 </td>
             </tr>            
@@ -75,7 +75,7 @@
                 <td>Number of Guests</td>
                 <td>
                     <form>
-                        <input type="number" name="guets" id="guests">
+                        <input type="number" name="guets" id="guests" value="5">
                     </form>
                 </td>
             </tr>            
@@ -86,9 +86,9 @@
                 <td>Size</td>
                 <td>
                     <form>
-                        <p>Small<input type="radio" name="ssize" id="size" placeholder="Small"></p>
-                        <p>Medium<input type="radio" name="msize" id="msize" placeholder="Medium"></p>
-                        <p>Large<input type="radio" name="lsize" id="lsize" placeholder="Large"></p>
+                        <p>Small</p><input type="radio" name="sm" value="sm">
+                        <p>Medium</p><input type="radio" name="md" value="md">
+                        <p>Large</p><input type="radio" name="lg" value="lg">
                     </form>
                 </td>
             </tr>            
@@ -96,57 +96,44 @@
                 <td>Drinks</td>
                 <td>
                     <form>
-                        <input type="text" name="#" id="$" placeholder="T">
+                        <input type="checkbox" name="drink1" checked="true" value="coke"> <label for="drink1">Coke</label><br>
+                        <input type="checkbox" name="drink2"  value="spite"><label for="drink2">Sprite</label><br>
+                        <input type="checkbox" name="drink3"  value="fruit punch"><label for="drink3">Fruit Punch</label><br>
+                        <input type="checkbox" name="drink4"  value="lemonade"><label for="drink4">Lemonade</label><br>
                     </form>
                 </td>
             </tr>            
             <tr>
-                <td>blank</td>
+                <td>Cake</td>
                 <td>
                     <form>
-                        <input type="text" name="#" id="$" placeholder="T">
+                        <select name="cake"><option>Chocolate</option><option>Vanilla</option><option>Personal Bring In</option>
+                    </form>
+                </td>
+            </tr>
+            <td><h2>Decor</h2></td>
+            <tr>
+                <td>Color Sceme</td>
+                <td>
+                    <form>
+                        <input type="color" name="colors">
                     </form>
                 </td>
             </tr>
             <tr>
-                <td>blank</td>
+                <td>Other Suggestions</td>
                 <td>
                     <form>
-                        <input type="text" name="#" id="$" placeholder="T">
+                        <textarea placeholder="Enter Other Suggestions Here" name="comments"></textarea>
                     </form>
                 </td>
             </tr>
             <tr>
-                <td>blank</td>
                 <td>
-                    <form>
-                        <input type="text" name="#" id="$" placeholder="T">
-                    </form>
+                    <a href="confirm.html"><input type="submit" value="submit"></a>
                 </td>
             </tr>
-            <tr>
-                <td>blank</td>
-                <td>
-                    <form>
-                        <input type="text" name="#" id="$" placeholder="T">
-                    </form>
-                </td>
-            </tr>
-
-            
-
-
-
-
-
-
-
-
-
         </tbody>
-
-
-
     </table>
 </body>
 </html>
