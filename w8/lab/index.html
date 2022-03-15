@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Richard Hennessy 3/14/2022 -->
     <title>Week 8 | Homework Assignment</title>
 </head>
 <body>
@@ -34,19 +35,21 @@
 	<!--The script tag should go after the HMTL, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
     <script>
-	
-		//Store the elements (tags) in variables
-		var first = #first
-		var last = #last
 
-		//Make an array to store the people
 		
-		var names = [
-			[first, last]
-
+	//Store the elements (tags) in variables
+	
+		var first = document.querySelector('#first')
+		var last = document.querySelector('#last')
+		var button = document.querySelector('#button')
+		var output
+		console.log(first, last)
+	
+		//Make an array to store the people
+		var Homosapians = []
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
-		
+		button.addEventListener('click', calcAndDisplay)
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -69,63 +72,77 @@
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
-
-            var person = { first + last}
-
-
-
-            }//end of person object
+			
+            var person = { 
+				first: first.value,
+				last: last.value
+            }
+			console.log(person.first, person.last)
+			//end of person object
 
 
 
 
 			//Add the person object into the people array by using the .push() array method.
+		
+			Homosapians.push(person)
 			
-
 			//Bubble sort people on the last name
-			for(let i=0; i < people.length-1; i++)
+			for(let i=0; i < Homosapians.length-1; i++)
 			{
-				for(let j=0; j < people.length-1; j++)
+				for(let j=0; j < Homosapians.length-1; j++)
 				{
-					if(people[j].last > people[j+1].last)
+					if(Homosapians[j].last > Homosapians[j+1].last)
 					{
-						let temp = people[j]
-						people[j] = people[j+1]
-						people[j+1] = temp
+						let temp = Homosapians[j]
+						Homosapians[j] = Homosapians[j+1]
+						Homosapians[j+1] = temp
 					}
 				}
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			
+			console.log(Homosapians)
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
-
+			var output = ''
+			var message = ''
 			//Loop through the objects in the people array
-			for()
+			for(let i=0; i <Homosapians.length; i++)
             {
 
+				var count = 0
 				//Loop through each property in the object
-				for(key in people[i])
+				for(let key in Homosapians[i])
                 {
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				
+					//person.first = person.first.toUpper()
+					//person.last = person.last.toUpper()
+					if(count == 0)
+					{
+            			message += 'First Name:' + Homosapians[i].first + '<br>'  
+            			//document.querySelector('#output').innerHTML = message
+						//i += 1
+					}
+					else{
+						message += 'Last Name: ' + Homosapians[i].last + '<br>'
+					}
+
+					count = count + 1
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
-
+				console.log(output)
+				message += '<hr>'
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
 				//replace the outputDiv's inner HTML with the output string
-				
-
+			document.querySelector('#output').innerHTML = message
 
 
 		}
